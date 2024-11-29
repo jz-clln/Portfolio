@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #121212;
+    color: #ddd;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #5F719D;
+    font-weight: 800;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    color: #ddd;
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: #bbb;
+    margin-left: 3rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ddd;
+    border-bottom: 3px solid #5F719D;
+}
+
+section {
+    min-height: 100vh;
+    padding: 6rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.home .home-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+.home-content h3 {
+    font-size: 3.5rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
+
+.home-img img {
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: #5F719D;
+    border-radius: 50%;
+    border: 2px solid #5F719D;
+    margin: 1rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #121212;
+    background-color: #ddd;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.hire-me-btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    color: #ddd;
+    background-color: transparent;
+    border: 2px solid #777;
+    border-radius: 6rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.hire-me-btn:hover {
+    background-color: #ddd;
+    color: #121212;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Typing Text Effect */
+.typing-text {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #5F719D;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dynamic-text {
+    color: #5F719D;
+    font-weight: 700;
+    margin-left: 0.5rem;
+    animation: fadeWords 6s infinite;
+}
+
+@keyframes fadeWords {
+    0%, 20% {
+        opacity: 0;
+    }
+    20%, 50% {
+        opacity: 1;
+        content: "Web Developer";
+    }
+    50%, 70% {
+        opacity: 0;
+    }
+    70%, 100% {
+        opacity: 1;
+        content: "Web Designer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .home .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+        margin-top: 2rem;
+    }
+}

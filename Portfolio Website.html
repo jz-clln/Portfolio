@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Portfolio Website_files/all.min.css">
+    <link rel="stylesheet" href="./Portfolio Website_files/style.css">
+    <title>Portfolio Website</title>
+</head>
+<body cz-shortcut-listen="true">
+    <header>
+        <a href="http://127.0.0.1:5500/#" class="logo">Jabez Collano</a>
+
+        <nav>
+            <a href="http://127.0.0.1:5500/#" class="active">Home</a>
+            <a href="http://127.0.0.1:5500/#">About Me</a>
+            <a href="http://127.0.0.1:5500/#">Contact</a>
+            <a href="http://127.0.0.1:5500/#">Service</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="./Portfolio Website_files/profile.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hello, It's me <span>Jabez</span></h1>
+            <h3 class="typing-text">I'm a <span class="dynamic-text">Web Developer</span></h3>
+            <p>I'm a passionate web developer and graphic designer from the Philippines, committed to creating visually appealing and functional websites.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/jabez-collano-9b1947305/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/Jabez.Collano.B" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/jz.clln/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <!-- Move the Hire Me button here -->
+            <a href="http://127.0.0.1:5500/#" class="btn hire-me-btn">Hire me</a>
+        </div>        
+    </section>
+    <script>
+        const words = ["Web Developer", "Web Designer"];
+        let wordIndex = 0;
+      
+        setInterval(() => {
+          document.querySelector(".dynamic-text").textContent = words[wordIndex];
+          wordIndex = (wordIndex + 1) % words.length;
+        }, 3000); // Change word every 3 seconds
+      </script>      
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
